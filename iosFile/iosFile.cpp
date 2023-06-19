@@ -22,7 +22,23 @@ int main()
             getline(cin, baris);
             //loop akan berhenti jika dimasukan char "q"
             if (baris == "q") break;
+            // menulis dan memasukan nilai dari "baris" ke dlm file
         }
+
+        // selesai dalam menulis sekarang tutup filenya
+        outfile.close();
+
+
+        // membuka file dalam mode membaca
+        ifstream infile;
+        // menunjuk ke sebuah file
+        infile.open("contohfile.txt");
+
+
+
+
+
+
 
 
 
