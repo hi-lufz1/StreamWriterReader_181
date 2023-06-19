@@ -40,8 +40,16 @@ int main()
         {
             // melakukan perulangan setiap baris
             while (getline(infile, baris)) {
+                // dan tampilkan disini
+                cout<< baris << '\n';
 
             }
+            // tutup file tsb setelah selesai
+            infile.close();
+
+
+
+           
         }
 
 
