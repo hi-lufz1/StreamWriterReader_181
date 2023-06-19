@@ -11,10 +11,10 @@ int main()
     cin >> NamaFile;
 
 
-     //membuka file dlm mode tulis
-        ofstream outfile;
+    //membuka file dlm mode tulis
+    ofstream outfile;
     // menunjuk ke sebuah nama file
-    outfile.open(NamaFile+".txt", ios ::out);
+    outfile.open(NamaFile + ".txt", ios::out);
 
     cout << ">= Menulis file, \'q' untuk keluar" << endl;
 
@@ -30,3 +30,28 @@ int main()
 
     // selesai dalam menulis sekarang tutup filenya
     outfile.close();
+
+
+    // membuka file dalam mode membaca
+    ifstream infile;
+    // menunjuk ke sebuah file
+    infile.open(NamaFile + ".txt", ios::in);
+
+    cout << endl << ">= Membuka dan membaca file " << endl;
+    // jika file ada maka
+    if (infile.is_open())
+    {
+        // melakukan perulangan setiap baris
+        while (getline(infile, baris)) {
+            // dan tampilkan disini
+            cout << baris << '\n';
+
+        }
+        // tutup file tsb setelah selesai
+        infile.close();
+
+    }
+    //jika file tidak ditemukan maka akan menampilkan ini
+    else cout << "Unable to open file";
+    return 0;
+}
